@@ -1,4 +1,4 @@
 import type { Client } from 'oicq';
-import type { KiviConf } from './config';
-/** 监听上线事件，初始化 KiviBot */
-export declare function onlineHandler(this: Client, kiviConf: KiviConf): Promise<void>;
+import type { PupConf } from './config';
+/** 监听上线事件，初始化 PupBot */
+export declare function onlineHandler(this: Client, PupConf: PupConf): Promise<void>;

@@ -1,5 +1,5 @@
 import type { Config } from 'oicq';
-import type { KiviPlugin } from './plugin';
+import type { PupPlugin } from './plugin';
 export type MainAdmin = number;
 export type AdminArray = [MainAdmin, ...number[]];
 /** 通知配置 */
@@ -24,11 +24,11 @@ export interface NoticeConf {
     };
     /** 群聊、讨论组相关（所有群） */
     group: {
-        /** 邀请机器人进群请求 */
+        /** 邀请 Bot 进群请求 */
         request: {
             /** 是否开启通知 */
             enable: boolean;
-            /** 如何处理邀请机器人进群请求，可选：ignore 忽略消息，accept 自动接受，refuse 自动拒绝 */
+            /** 如何处理邀请 Bot 进群请求，可选：ignore 忽略消息，accept 自动接受，refuse 自动拒绝 */
             action: 'ignore' | 'accept' | 'refuse';
         };
         /** Bot 的群聊增加 */
@@ -43,8 +43,8 @@ export interface NoticeConf {
         transfer: boolean;
     };
 }
-/** KiviBot 配置文件 */
-export interface KiviConf {
+/** PupBot 配置文件 */
+export interface PupConf {
     /** 登录账号 */
     account: number;
     /** 登录模式，可选 password，qrcode */
@@ -61,11 +61,11 @@ export interface KiviConf {
     notice: NoticeConf;
     /** 启用插件列表 */
     plugins: string[];
-    /** KiviBot 日志显示等级 */
+    /** PupBot 日志显示等级 */
     log_level: Config['log_level'];
     /** oicq 相关配置 */
     oicq_config: Config;
 }
-export declare const kiviConf: KiviConf;
-/** 保存 KiviBot 框架配置到配置文件`kivi.json` */
-export declare const saveKiviConf: (_plugins?: Map<string, KiviPlugin>) => boolean;
+export declare const PupConf: PupConf;
+/** 保存 PupBot 框架配置到配置文件`config.json` */
+export declare const savePupConf: (_plugins?: Map<string, PupPlugin>) => boolean;

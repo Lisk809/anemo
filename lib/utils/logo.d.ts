@@ -1,2 +1,2 @@
-/** KiviBot LOGO */
+/** PupBot LOGO */
 export declare const LOGO: string;

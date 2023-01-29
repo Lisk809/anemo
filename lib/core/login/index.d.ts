@@ -1,4 +1,4 @@
-export * from './device';
-export * from './error';
+import type { Client } from 'oicq';
+import type { PupConf } from '../config';
 export * from './qrCode';
-export * from './slider';
+export declare function bindLoginEvent(bot: Client, conf: PupConf): Promise<void>;

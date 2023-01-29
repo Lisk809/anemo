@@ -1,8 +1,8 @@
-/** KiviBot 插件错误类 */
-export declare class KiviPluginError extends Error {
+/** PupBot 插件错误类 */
+export declare class PupPluginError extends Error {
     name: string;
     pluginName: string;
     message: string;
     constructor(name: string, message?: string);
-    log(): void;
+    log(): string;
 }

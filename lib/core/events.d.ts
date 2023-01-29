@@ -6,5 +6,5 @@ export declare const NoticeEvents: readonly ["notice.friend.increase", "notice.f
 export declare const SyncEvents: readonly ["sync.message", "sync.read.private", "sync.read.group", "sync.read"];
 /** oicq v2 标准事件列表 */
 export declare const OicqEvents: (keyof EventMap<Client>)[];
-/** KiviBot 标准事件列表 */
-export declare const KiviEvents: readonly ["kivi.admins"];
+/** PupBot 标准事件列表 */
+export declare const PupEvents: readonly ["pup.admins"];
